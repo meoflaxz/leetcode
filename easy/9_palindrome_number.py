@@ -2,10 +2,18 @@
 
 class Solution:
     def isPalindrome(self, x: int) -> bool:
-        if x == True:
-            return True
-        return x
+
+      x = str(x)
+      if x == x[::-1]:
+          return True
+      else:
+          return False
+
+## Test Case
+# input -> 121, output -> True
+# input -> -121, output -> False
+# input -> 10, output -> False
 
 if __name__ == "__main__":
     solution = Solution()
-    print(solution.isPalindrome(121))
+    print(solution.isPalindrome(12321))
