@@ -23,9 +23,11 @@ class Solution:
 
         prefix = strs[0]
 
+        ## compare each string in list with first prefix
         for string in strs[1:]:
             while not string.startswith(prefix):
                 prefix = prefix[:-1]
+                ## if when we remove last character, then nothing left, it means it is not a list, and no common prefix
                 if not prefix:
                     return ""
         return prefix
