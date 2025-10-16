@@ -22,22 +22,15 @@ class Solution:
                      }
         result = []
 
-        # for i in row.values():
-        #     for word in words:
-        #         if all(char.lower() in i for char in word):
+        for i in row.values():
+            for word in words:
+                if all(char.lower() in i for char in word):
 
-        #             # same with 
-        #             # for char in word:
-        #             #       char.lower() in i
-        #             result.append(word)
-
-
-        for word in words:
-            for char in word:
-                for i in char:
-                    for j in i:
-                        print(j)
+                    # same with 
+                    # for char in word:
+                    #       char.lower() in i
+                    result.append(word)
         return result
 if __name__ == "__main__":
     solution = Solution()
-    print(solution.findWords(["ASD"]))
+    print(solution.findWords(["ASD", "IUTUTYI"]))
