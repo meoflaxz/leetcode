@@ -17,7 +17,7 @@ class Solution:
         # comparing the n & n-1 through bitwise operation, result should always to 0
         # this just means that the code is looking n that is greater than 0 and checking True for second condition
         return n > 0 and not (n & (n -1))
-        # can also be written as (n & (n-1)) == 0
+        # can also be written as not (n & (n-1)) == 0
 
 if __name__ == "__main__":
     solution = Solution()
