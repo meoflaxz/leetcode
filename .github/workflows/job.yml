@@ -3,10 +3,6 @@ name: Update LeetCode README
 on:
   push:
     branches: [ master ]
-    paths:
-      - 'easy/**'
-      - 'medium/**'
-      - 'hard/**'
   workflow_dispatch:
 
 jobs:
