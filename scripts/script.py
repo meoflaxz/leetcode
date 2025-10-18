@@ -15,16 +15,18 @@ def parse_problems_by_difficulty():
         for file in sorted(diff_dir.iterdir()):
             if file.is_file() and file.suffix in ['.py', '.js', '.java', '.cpp', '.go']:
                 # Extract problem info from filename
-                # Expected format: 0001-two-sum.py or two-sum.py
+                # Expected format: 0001-two-sum.py or two-sum.py or 1_two_sum.py
                 name = file.stem
-                match = re.match(r'^(\d+)-(.+)$', name)
+                
+                # Try to extract number from filename
+                match = re.match(r'^(\d+)[_-](.+)$', name)
                 
                 if match:
                     number = int(match.group(1))
-                    problem_name = match.group(2).replace('-', ' ').title()
+                    problem_name = match.group(2).replace('_', ' ').replace('-', ' ').title()
                 else:
                     number = 0
-                    problem_name = name.replace('-', ' ').title()
+                    problem_name = name.replace('_', ' ').replace('-', ' ').title()
                 
                 all_problems[difficulty].append({
                     'number': number,
@@ -35,18 +37,19 @@ def parse_problems_by_difficulty():
     
     return all_problems
 
-def generate_table(problems):
-    """Generate markdown table for problems"""
+def generate_compact_list(problems):
+    """Generate compact markdown list for problems"""
     if not problems:
         return 'No problems solved yet.'
     
-    lines = ['| # | Problem | Language |', '|---|---------|----------|']
+    lines = []
     
-    for problem in sorted(problems, key=lambda x: x['number'], reverse=True):
-        num = f"{problem['number']}" if problem['number'] > 0 else '-'
-        lines.append(
-            f"| {num} | [{problem['name']}]({problem['file']}) | `{problem['language']}` |"
-        )
+    for problem in sorted(problems, key=lambda x: x['number'] if x['number'] > 0 else 9999):
+        num = f"**{problem['number']}**" if problem['number'] > 0 else ""
+        # Create cleaner problem name
+        clean_name = problem['name']
+        # Make it a link to the file
+        lines.append(f"{num}. [{clean_name}]({problem['file']})")
     
     return '\n'.join(lines)
 
@@ -77,28 +80,28 @@ def update_readme(all_problems):
     )
     
     # Update Easy section
-    easy_table = f"<!-- LEETCODE-EASY:START -->\n{generate_table(all_problems['easy'])}\n<!-- LEETCODE-EASY:END -->"
+    easy_list = f"<!-- LEETCODE-EASY:START -->\n{generate_compact_list(all_problems['easy'])}\n<!-- LEETCODE-EASY:END -->"
     content = re.sub(
         r'<!-- LEETCODE-EASY:START -->.*?<!-- LEETCODE-EASY:END -->',
-        easy_table,
+        easy_list,
         content,
         flags=re.DOTALL
     )
     
     # Update Medium section
-    medium_table = f"<!-- LEETCODE-MEDIUM:START -->\n{generate_table(all_problems['medium'])}\n<!-- LEETCODE-MEDIUM:END -->"
+    medium_list = f"<!-- LEETCODE-MEDIUM:START -->\n{generate_compact_list(all_problems['medium'])}\n<!-- LEETCODE-MEDIUM:END -->"
     content = re.sub(
         r'<!-- LEETCODE-MEDIUM:START -->.*?<!-- LEETCODE-MEDIUM:END -->',
-        medium_table,
+        medium_list,
         content,
         flags=re.DOTALL
     )
     
     # Update Hard section
-    hard_table = f"<!-- LEETCODE-HARD:START -->\n{generate_table(all_problems['hard'])}\n<!-- LEETCODE-HARD:END -->"
+    hard_list = f"<!-- LEETCODE-HARD:START -->\n{generate_compact_list(all_problems['hard'])}\n<!-- LEETCODE-HARD:END -->"
     content = re.sub(
         r'<!-- LEETCODE-HARD:START -->.*?<!-- LEETCODE-HARD:END -->',
-        hard_table,
+        hard_list,
         content,
         flags=re.DOTALL
     )
