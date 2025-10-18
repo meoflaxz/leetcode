@@ -15,20 +15,18 @@ My personal collection of LeetCode problem solutions.
 
 ### Easy
 <!-- LEETCODE-EASY:START -->
-**1**. [Two Sum](1_two_sum.py)
-**9**. [Palindrome Number](9_palindrome_number.py)
-**13**. [Roman To Integer](13_roman_to_integer.py)
-**14**. [Longest Common Prefix](14_longest_common_prefix.py)
-**20**. [Valid Parentheses](20_valid_parentheses.py)
-**26**. [Remove Duplicates From Sorted Array](26_remove_duplicates_from_sorted_array.py)
-**27**. [Remove Element](27_remove_element.py)
-**28**. [Find The Index Of The First Occurence In A String](28_find_the_index_of_the_first_occurence_in_a_string.py)
-**58**. [Length Of Last Word](58_length_of_last_word.py)
-**66**. [Plus One](66_plus_one.py)
-**231**. [Power Of Two](231_power_of_two.py)
-**387**. [First Unique Character In A String](387_first_unique_character_in_a_string.py)
-**414**. [Third Maximum Number](414_third_maximum_number.py)
-**500**. [Keyboard Row](500_keyboard_row.py)
+| # | Problem | Lang |
+|---|---------|------|
+| 14 | [Longest Common Prefix](14_longest_common_prefix.py) | py |
+| 1 | [Two Sum](1_two_sum.py) | py |
+| 20 | [Valid Parentheses](20_valid_parentheses.py) | py |
+| 231 | [Power Of Two](231_power_of_two.py) | py |
+| 26 | [Remove Duplicates From Sorted Array](26_remove_duplicates_from_sorted_array.py) | py |
+| 27 | [Remove Element](27_remove_element.py) | py |
+| 28 | [Find The Index Of The First Occurence In A String](28_find_the_index_of_the_first_occurence_in_a_string.py) | py |
+| 387 | [First Unique Character In A String](387_first_unique_character_in_a_string.py) | py |
+| 414 | [Third Maximum Number](414_third_maximum_number.py) | py |
+| 500 | [Keyboard Row](500_keyboard_row.py) | py |
 <!-- LEETCODE-EASY:END -->
 
 ### Medium
