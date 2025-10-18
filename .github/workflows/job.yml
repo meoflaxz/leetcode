@@ -2,7 +2,7 @@ name: Update LeetCode README
 
 on:
   push:
-    branches: [ main | master ]
+    branches: [ master ]
     paths:
       - 'easy/**'
       - 'medium/**'
