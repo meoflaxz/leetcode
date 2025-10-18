@@ -17,11 +17,15 @@ from typing import List
 
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
+
         k = 0
 
         for i in range(len(nums)):
             if nums[i] != val:
+                # just replace the item with k
+                # basicaly we just removed the item occurences
                 nums[k] = nums[i]
+                # k is incremented to prepare for next position
                 k += 1
         print(nums)
         return k
