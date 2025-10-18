@@ -28,28 +28,34 @@ def parse_problems_by_difficulty():
                     number = 0
                     problem_name = name.replace('_', ' ').replace('-', ' ').title()
                 
+                # Get file modification time for sorting by recency
+                mtime = file.stat().st_mtime
+                
                 all_problems[difficulty].append({
                     'number': number,
                     'name': problem_name,
                     'file': file.name,
-                    'language': file.suffix[1:]
+                    'language': file.suffix[1:],
+                    'mtime': mtime
                 })
     
     return all_problems
 
-def generate_compact_list(problems):
-    """Generate compact markdown list for problems"""
+def generate_table(problems, limit=10):
+    """Generate markdown table for problems (limited to most recent)"""
     if not problems:
         return 'No problems solved yet.'
     
-    lines = []
+    # Sort by modification time (most recent first) and take top N
+    recent_problems = sorted(problems, key=lambda x: x['mtime'], reverse=True)[:limit]
     
-    for problem in sorted(problems, key=lambda x: x['number'] if x['number'] > 0 else 9999):
-        num = f"**{problem['number']}**" if problem['number'] > 0 else ""
-        # Create cleaner problem name
-        clean_name = problem['name']
-        # Make it a link to the file
-        lines.append(f"{num}. [{clean_name}]({problem['file']})")
+    lines = ['| # | Problem | Lang |', '|---|---------|------|']
+    
+    for problem in recent_problems:
+        num = f"{problem['number']}" if problem['number'] > 0 else '-'
+        lines.append(
+            f"| {num} | [{problem['name']}]({problem['file']}) | {problem['language']} |"
+        )
     
     return '\n'.join(lines)
 
@@ -79,29 +85,29 @@ def update_readme(all_problems):
         flags=re.DOTALL
     )
     
-    # Update Easy section
-    easy_list = f"<!-- LEETCODE-EASY:START -->\n{generate_compact_list(all_problems['easy'])}\n<!-- LEETCODE-EASY:END -->"
+    # Update Easy section (10 most recent)
+    easy_table = f"<!-- LEETCODE-EASY:START -->\n{generate_table(all_problems['easy'], limit=10)}\n<!-- LEETCODE-EASY:END -->"
     content = re.sub(
         r'<!-- LEETCODE-EASY:START -->.*?<!-- LEETCODE-EASY:END -->',
-        easy_list,
+        easy_table,
         content,
         flags=re.DOTALL
     )
     
-    # Update Medium section
-    medium_list = f"<!-- LEETCODE-MEDIUM:START -->\n{generate_compact_list(all_problems['medium'])}\n<!-- LEETCODE-MEDIUM:END -->"
+    # Update Medium section (10 most recent)
+    medium_table = f"<!-- LEETCODE-MEDIUM:START -->\n{generate_table(all_problems['medium'], limit=10)}\n<!-- LEETCODE-MEDIUM:END -->"
     content = re.sub(
         r'<!-- LEETCODE-MEDIUM:START -->.*?<!-- LEETCODE-MEDIUM:END -->',
-        medium_list,
+        medium_table,
         content,
         flags=re.DOTALL
     )
     
-    # Update Hard section
-    hard_list = f"<!-- LEETCODE-HARD:START -->\n{generate_compact_list(all_problems['hard'])}\n<!-- LEETCODE-HARD:END -->"
+    # Update Hard section (10 most recent)
+    hard_table = f"<!-- LEETCODE-HARD:START -->\n{generate_table(all_problems['hard'], limit=10)}\n<!-- LEETCODE-HARD:END -->"
     content = re.sub(
         r'<!-- LEETCODE-HARD:START -->.*?<!-- LEETCODE-HARD:END -->',
-        hard_list,
+        hard_table,
         content,
         flags=re.DOTALL
     )
