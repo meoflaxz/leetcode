@@ -13,7 +13,7 @@ def parse_problems_by_difficulty():
             continue
         
         for file in sorted(diff_dir.iterdir()):
-            if file.is_file() and file.suffix in ['.py', '.js', '.java', '.cpp', '.go']:
+            if file.is_file() and file.suffix in ['.py', '.js', '.java', '.cpp', '.go', '.sh']:
                 # Extract problem info from filename
                 # Expected format: 0001-two-sum.py or two-sum.py or 1_two_sum.py
                 name = file.stem
