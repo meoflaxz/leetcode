@@ -5,8 +5,8 @@ My personal collection of LeetCode problem solutions.
 ## 📊 Progress
 
 <!-- LEETCODE-STATS:START -->
-- Total: 18 problems
-- Easy: 18
+- Total: 19 problems
+- Easy: 19
 - Medium: 0
 - Hard: 0
 <!-- LEETCODE-STATS:END -->
@@ -25,8 +25,8 @@ My personal collection of LeetCode problem solutions.
 | 21 | [Merge Two Sorted Lists](21_merge_two_sorted_lists.py) | py |
 | 231 | [Power Of Two](231_power_of_two.py) | py |
 | 242 | [Valid Anagram](242_valid_anagram.py) | py |
+| 268 | [Missing Number](268_missing_number.py) | py |
 | 26 | [Remove Duplicates From Sorted Array](26_remove_duplicates_from_sorted_array.py) | py |
-| 27 | [Remove Element](27_remove_element.py) | py |
 <!-- LEETCODE-EASY:END -->
 
 ### Medium
