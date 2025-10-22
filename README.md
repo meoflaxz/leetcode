@@ -5,8 +5,8 @@ My personal collection of LeetCode problem solutions.
 ## 📊 Progress
 
 <!-- LEETCODE-STATS:START -->
-- Total: 17 problems
-- Easy: 17
+- Total: 18 problems
+- Easy: 18
 - Medium: 0
 - Hard: 0
 <!-- LEETCODE-STATS:END -->
@@ -24,9 +24,9 @@ My personal collection of LeetCode problem solutions.
 | 20 | [Valid Parentheses](20_valid_parentheses.py) | py |
 | 21 | [Merge Two Sorted Lists](21_merge_two_sorted_lists.py) | py |
 | 231 | [Power Of Two](231_power_of_two.py) | py |
+| 242 | [Valid Anagram](242_valid_anagram.py) | py |
 | 26 | [Remove Duplicates From Sorted Array](26_remove_duplicates_from_sorted_array.py) | py |
 | 27 | [Remove Element](27_remove_element.py) | py |
-| 28 | [Find The Index Of The First Occurence In A String](28_find_the_index_of_the_first_occurence_in_a_string.py) | py |
 <!-- LEETCODE-EASY:END -->
 
 ### Medium
