@@ -12,7 +12,7 @@
 from typing import List
 
 class Solution:
-    def findWords(self, words: List[str]) -> List[str]:
+    def findWords(self, words: List[str]) -> List[str]: 
 
         row = {
                         "first": ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
