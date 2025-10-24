@@ -31,8 +31,13 @@ class Solution:
             # store distinct value if not seen before, set will only store unique item
             value.add(num)
 
+
         # will return False if no unique value in list
         return False
 
 solution = Solution()
 print(solution.containsDuplicate([4,5,6,7,8,9,4]))
+
+
+# ALTERNATIVE ANSWER
+# return len(set(nums))<len(nums) -> SORT AND DEDUP ELEMENTS AUTOMATICALLY
