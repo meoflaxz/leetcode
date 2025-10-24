@@ -5,8 +5,8 @@ My personal collection of LeetCode problem solutions.
 ## 📊 Progress
 
 <!-- LEETCODE-STATS:START -->
-- Total: 20 problems
-- Easy: 20
+- Total: 21 problems
+- Easy: 21
 - Medium: 0
 - Hard: 0
 <!-- LEETCODE-STATS:END -->
@@ -17,6 +17,8 @@ My personal collection of LeetCode problem solutions.
 <!-- LEETCODE-EASY:START -->
 | # | Problem | Lang |
 |---|---------|------|
+| 67 | [Add Binary](67_add_binary.py) | py |
+| 9 | [Palindrome Number](9_palindrome_number.py) | py |
 | 13 | [Roman To Integer](13_roman_to_integer.py) | py |
 | 14 | [Longest Common Prefix](14_longest_common_prefix.py) | py |
 | 193 | [Valid Phone Number](193_valid_phone_number.sh) | sh |
@@ -25,8 +27,6 @@ My personal collection of LeetCode problem solutions.
 | 217 | [Contains Duplicate](217_contains_duplicate.py) | py |
 | 21 | [Merge Two Sorted Lists](21_merge_two_sorted_lists.py) | py |
 | 231 | [Power Of Two](231_power_of_two.py) | py |
-| 242 | [Valid Anagram](242_valid_anagram.py) | py |
-| 268 | [Missing Number](268_missing_number.py) | py |
 <!-- LEETCODE-EASY:END -->
 
 ### Medium
