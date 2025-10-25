@@ -5,8 +5,8 @@ My personal collection of LeetCode problem solutions.
 ## 📊 Progress
 
 <!-- LEETCODE-STATS:START -->
-- Total: 22 problems
-- Easy: 22
+- Total: 23 problems
+- Easy: 23
 - Medium: 0
 - Hard: 0
 <!-- LEETCODE-STATS:END -->
@@ -17,16 +17,16 @@ My personal collection of LeetCode problem solutions.
 <!-- LEETCODE-EASY:START -->
 | # | Problem | Lang |
 |---|---------|------|
-| 414 | [Third Maximum Number](414_third_maximum_number.py) | py |
-| 415 | [Add Strings](415_add_strings.py) | py |
-| 500 | [Keyboard Row](500_keyboard_row.py) | py |
-| 58 | [Length Of Last Word](58_length_of_last_word.py) | py |
-| 66 | [Plus One](66_plus_one.py) | py |
-| 67 | [Add Binary](67_add_binary.py) | py |
-| 9 | [Palindrome Number](9_palindrome_number.py) | py |
 | 13 | [Roman To Integer](13_roman_to_integer.py) | py |
 | 14 | [Longest Common Prefix](14_longest_common_prefix.py) | py |
 | 193 | [Valid Phone Number](193_valid_phone_number.sh) | sh |
+| 1 | [Two Sum](1_two_sum.py) | py |
+| 20 | [Valid Parentheses](20_valid_parentheses.py) | py |
+| 217 | [Contains Duplicate](217_contains_duplicate.py) | py |
+| 21 | [Merge Two Sorted Lists](21_merge_two_sorted_lists.py) | py |
+| 231 | [Power Of Two](231_power_of_two.py) | py |
+| 242 | [Valid Anagram](242_valid_anagram.py) | py |
+| 268 | [Missing Number](268_missing_number.py) | py |
 <!-- LEETCODE-EASY:END -->
 
 ### Medium
