@@ -34,4 +34,4 @@ class Solution:
     
 if __name__ == "__main__":
     solution = Solution()
-    print(solution.searchInsert([1,2,3], 5))
+    print(solution.searchInsert([1,2,3], 5)) 
