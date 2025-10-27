@@ -5,8 +5,8 @@ My personal collection of LeetCode problem solutions.
 ## 📊 Progress
 
 <!-- LEETCODE-STATS:START -->
-- Total: 24 problems
-- Easy: 24
+- Total: 25 problems
+- Easy: 25
 - Medium: 0
 - Hard: 0
 <!-- LEETCODE-STATS:END -->
@@ -17,16 +17,16 @@ My personal collection of LeetCode problem solutions.
 <!-- LEETCODE-EASY:START -->
 | # | Problem | Lang |
 |---|---------|------|
-| 125 | [Valid Palindrome](125_valid_palindrome.py) | py |
-| 13 | [Roman To Integer](13_roman_to_integer.py) | py |
-| 14 | [Longest Common Prefix](14_longest_common_prefix.py) | py |
-| 193 | [Valid Phone Number](193_valid_phone_number.sh) | sh |
-| 1 | [Two Sum](1_two_sum.py) | py |
-| 20 | [Valid Parentheses](20_valid_parentheses.py) | py |
-| 217 | [Contains Duplicate](217_contains_duplicate.py) | py |
-| 21 | [Merge Two Sorted Lists](21_merge_two_sorted_lists.py) | py |
-| 231 | [Power Of Two](231_power_of_two.py) | py |
-| 242 | [Valid Anagram](242_valid_anagram.py) | py |
+| 27 | [Remove Element](27_remove_element.py) | py |
+| 28 | [Find The Index Of The First Occurence In A String](28_find_the_index_of_the_first_occurence_in_a_string.py) | py |
+| 35 | [Search Insert Position](35_search_insert_position.py) | py |
+| 387 | [First Unique Character In A String](387_first_unique_character_in_a_string.py) | py |
+| 389 | [Find The Difference](389_find_the_difference.py) | py |
+| 414 | [Third Maximum Number](414_third_maximum_number.py) | py |
+| 415 | [Add Strings](415_add_strings.py) | py |
+| 500 | [Keyboard Row](500_keyboard_row.py) | py |
+| 58 | [Length Of Last Word](58_length_of_last_word.py) | py |
+| 66 | [Plus One](66_plus_one.py) | py |
 <!-- LEETCODE-EASY:END -->
 
 ### Medium
